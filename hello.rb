@@ -1,19 +1,14 @@
-def create_message
+def manipulate_fruits_array
 
-    language = "Ruby"
-    feelling = "楽しい"
+    fruits = []
 
-
-    message = "私は #{language} を勉強しています。\n"
-
-    message +="プログラミングは #{feelling}\n"
-
-    message += "頑張って学習を続けましょう！"
+    fruits.push("りんご")
+    fruits.push("バナナ")
+    fruits.unshift("みかん")
+    fruits.delete_at(-1)
+    fruits.delete("みかん")
 
 
+    fruits
 
-    message
 end
-
-
-puts create_message
