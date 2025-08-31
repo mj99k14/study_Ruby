@@ -1,14 +1,17 @@
-def manipulate_fruits_array
-
-    fruits = []
-
-    fruits.push("りんご")
-    fruits.push("バナナ")
-    fruits.unshift("みかん")
-    fruits.delete_at(-1)
-    fruits.delete("みかん")
+# person = {
+#     "name"=> "kim",
+#     "age" => 20
+# }
 
 
-    fruits
+# person_s = {:name => "kim"}
 
-end
+# puts person_s
+
+
+person = {
+    name:"kim",
+    age:12
+}
+
+puts person[:name]
