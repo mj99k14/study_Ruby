@@ -1,30 +1,40 @@
-score = 85
- 
-case score
-when 90..100
-  puts "S評価です"
-when 80..89
-  puts "A評価です"
-when 70..79
-  puts "B評価です"
-when 60..69
-  puts "C評価です"
-else
-  puts "D評価です"
-end
+number = [1,2,3]
+
+# number.each do |n|
+#     puts n
 
 
-month = 7
- 
-case month
-when 3, 4, 5
-  puts "春です"
-when 6, 7, 8
-  puts "夏です"
-when 9, 10, 11
-  puts "秋です"
-when 12, 1, 2
-  puts "冬です"
-else
-  puts "正しい月を入力してください"
+# end
+
+
+# items = ["커피","홍차","녹차"]
+
+# items.each do |drink|
+#     puts drink[1]
+# end
+
+
+# price = [100,200,300]
+# total = 0
+# price.each do |price|
+#     total+=price
+    
+#     puts " #{total}"
+
+# end
+
+# number = [1,2,3]
+# number.each {|number| puts number}
+
+
+fruits  = ["귤","바나나","사과"]
+
+
+fruits.each.with_index() do |fruits,i|
+    puts fruits
+    puts i 
+    puts '==============='
+    puts "#{i}번쨰 과일 #{fruits}"
+
+
 end
