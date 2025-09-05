@@ -73,3 +73,27 @@
 # end
 
 # greet("hi","kmj")
+
+#에외 처리
+
+# def divide(a,b)
+#     a / b
+# rescue
+#         puts "0"
+# end
+
+
+# puts divide(10, 0)
+
+
+def greet(name)
+    if name.empty?
+        raise "이름입력해줘"
+    end
+    puts "안녕 #{name}입 니다"
+rescue =>e
+    puts e
+end
+
+
+greet("민정")
