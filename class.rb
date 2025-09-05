@@ -1,18 +1,14 @@
 class Character
-    def initialize(name = " 없음",hp =100)
-        @name = name
-        @hp = hp
-        puts "뭔가만들었음"
-    end
+    attr_accessor :name
+    # attr_reader:name #읽기전용
 
-    def show_status
-        puts "이름:#{@name}"
-        puts"hp: #{@hp}"
+    def initialize(name)
+        @name = name
     end
 end
+tomada = Character.new("kmj")
+puts tomada.name
+tomada.name = "kmj123"
+puts tomada.name
 
-# hero = Character.new
-# hero.show_status
 
-km = Character.new("kmj",900)
-km.show_status
