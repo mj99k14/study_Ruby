@@ -1,30 +1,30 @@
-class Animal
-  def speak
-    puts "鳴き声"
-  end
+def check_fruit(fruit_name)
+  # 果物の配列
+  fruits = ["りんご", "バナナ", "オレンジ", "ぶどう", "メロン"]
+  
+  # Todo 1.
+  # fruitsにfruit_nameが含まれているかを確認し、
+    if fruits.include?(fruit_name)
+        puts "#{fruit_name}は果物リストに含まれています"
+    else
+        puts"#{fruit_name}は果物リストに含まれていません"
+    end
+   
 end
  
-module Zoo
-  class Animal
-    def speak
-      puts "動物園の動物が鳴いています"
+def check_greeting(message)
+  # 正しい挨拶の文字列
+  greeting = "こんにちは"
+  
+  # Todo 2.
+  # messageにgreetingが含まれているかを確認し、
+    if message.include?("greeting")
+        puts  "正しい挨拶が含まれています"
+    else
+        puts  "正しい挨拶が含まれていません"
     end
-  end
-end
- 
-module Farm
-  class Animal
-    def speak
-      puts "農場の動物が鳴いています"
-    end
-  end
 end
 
-animal = Animal.new
-animal.speak
 
-zoo_animal= Zoo::Animal.new
-zoo_animal.speak
-
-farm_animal = Farm::Animal.new
-farm_animal.speak
+check_fruit("バナナ")
+check_greeting("hi")
