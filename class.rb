@@ -1,43 +1,30 @@
-# class Configuration
-#     SETTINGS = {
-#         timeout: 30,
-#         retries: 3,
-#     }.freeze
-# end
-
-# puts Configuration::SETTINGS[:timeout]
-# Configuration::SETTINGS[:timeout] =  60
-# puts Configuration::SETTINGS[:timeout]
-
 class Animal
-    def initialize(name)
-        @name =name
-    end
-
+  def speak
+    puts "鳴き声"
+  end
+end
+ 
+module Zoo
+  class Animal
     def speak
-        puts "#{@name}가 짓는다"
+      puts "動物園の動物が鳴いています"
     end
-    
-    def sleep
-        puts "#{@name} 가 잠잔다"
+  end
+end
+ 
+module Farm
+  class Animal
+    def speak
+      puts "農場の動物が鳴いています"
     end
-
+  end
 end
 
-class Dog < Animal
-    def speak
-        puts "#{@name}가 짓는다"
-    end
-end
+animal = Animal.new
+animal.speak
 
-class Cat < Animal
-    def speak
-        puts "#{@name}가 짓는다"
-    end
-end
+zoo_animal= Zoo::Animal.new
+zoo_animal.speak
 
-
-dog = Dog.new("말티즈")
-cat = Cat.new("폼")
-
-dog.sleep
+farm_animal = Farm::Animal.new
+farm_animal.speak
