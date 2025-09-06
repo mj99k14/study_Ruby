@@ -1,28 +1,43 @@
-class Character
-    def self.create_warrior
-        puts "전사 작성"
-        new("전사", 200)
+# class Configuration
+#     SETTINGS = {
+#         timeout: 30,
+#         retries: 3,
+#     }.freeze
+# end
 
+# puts Configuration::SETTINGS[:timeout]
+# Configuration::SETTINGS[:timeout] =  60
+# puts Configuration::SETTINGS[:timeout]
+
+class Animal
+    def initialize(name)
+        @name =name
     end
 
-    def self.create_wizard
-        puts "마법 작성"
-        new("마법 사용", 100)
+    def speak
+        puts "#{@name}가 짓는다"
+    end
+    
+    def sleep
+        puts "#{@name} 가 잠잔다"
     end
 
-    def initialize(job,hp)
-        @job = job
-        @hp = hp
-    end
+end
 
-    def status
-        puts "마법 #{@job}"
-        puts "hp #{@hp}"
+class Dog < Animal
+    def speak
+        puts "#{@name}가 짓는다"
     end
 end
 
- warrior = Character.create_warrior
- warrior.status
- puts "=========================="
- wizard = Character.create_wizard
-wizard.status
+class Cat < Animal
+    def speak
+        puts "#{@name}가 짓는다"
+    end
+end
+
+
+dog = Dog.new("말티즈")
+cat = Cat.new("폼")
+
+dog.sleep
