@@ -1,14 +1,28 @@
 class Character
-    attr_accessor :name
-    # attr_reader:name #읽기전용
+    def self.create_warrior
+        puts "전사 작성"
+        new("전사", 200)
 
-    def initialize(name)
-        @name = name
+    end
+
+    def self.create_wizard
+        puts "마법 작성"
+        new("마법 사용", 100)
+    end
+
+    def initialize(job,hp)
+        @job = job
+        @hp = hp
+    end
+
+    def status
+        puts "마법 #{@job}"
+        puts "hp #{@hp}"
     end
 end
-tomada = Character.new("kmj")
-puts tomada.name
-tomada.name = "kmj123"
-puts tomada.name
 
-
+ warrior = Character.create_warrior
+ warrior.status
+ puts "=========================="
+ wizard = Character.create_wizard
+wizard.status
